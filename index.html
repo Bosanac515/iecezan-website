@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -179,6 +180,54 @@
   .value-card .icon svg{width:28px;height:28px}
   .value-card h3{margin-bottom:8px;font-size:1.3rem}
   .value-card p{color:var(--muted);font-size:.95rem}
+
+  /* ---- New Mosque section ---- */
+  .new-mosque{
+    background:linear-gradient(180deg,var(--cream) 0%,var(--cream-2) 100%);
+    padding-top:64px;padding-bottom:72px;position:relative;
+  }
+  .new-mosque::before{
+    content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);
+    width:60px;height:3px;background:var(--gold);border-radius:3px;
+  }
+  .nm-grid{
+    display:grid;gap:28px;align-items:start;margin-top:8px;
+    grid-template-columns:1fr;
+  }
+  @media(min-width:880px){.nm-grid{grid-template-columns:1.4fr 1fr}}
+  .nm-media{display:grid;gap:18px}
+  .nm-image, .nm-video{
+    margin:0;background:var(--white);border:1px solid var(--line);
+    border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
+  }
+  .nm-image img{width:100%;height:auto;display:block;aspect-ratio:16/10;object-fit:cover}
+  .nm-image figcaption, .nm-video figcaption{
+    padding:10px 14px;color:var(--muted);font-size:.85rem;
+    background:var(--cream-2);border-top:1px solid var(--line);text-align:center;letter-spacing:.02em;
+  }
+  .nm-video-wrap{position:relative;width:100%;aspect-ratio:16/9;background:var(--ink);overflow:hidden}
+  .nm-video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+  .nm-goal-card{
+    background:linear-gradient(160deg,var(--green-900),var(--green-700));
+    color:var(--cream);border-radius:var(--radius);padding:32px 26px;
+    box-shadow:var(--shadow-lg);position:sticky;top:90px;
+    border:1.5px solid var(--gold);text-align:center;
+  }
+  @media(max-width:879px){.nm-goal-card{position:static}}
+  .nm-goal-eyebrow{
+    display:block;color:var(--gold-light);letter-spacing:.16em;
+    font-size:.72rem;font-weight:700;text-transform:uppercase;margin-bottom:14px;
+  }
+  .nm-goal-amount{
+    font-family:'Cormorant Garamond',serif;font-weight:700;
+    font-size:clamp(2.6rem,7vw,3.6rem);line-height:1;
+    color:var(--gold-light);margin:8px 0 12px;letter-spacing:-.01em;
+  }
+  .nm-goal-sub{color:rgba(250,247,240,.85);font-size:.95rem;margin-bottom:22px;font-style:italic}
+  .nm-goal-btn{width:100%}
+  .nm-goal-foot{
+    color:rgba(250,247,240,.55);font-size:.75rem;margin-top:16px;line-height:1.45;
+  }
 
   /* ---- Quick action cards (prayer / donate / contact) ---- */
   .actions{background:var(--cream-2);}
@@ -376,6 +425,7 @@
     <div class="nav-actions">
       <ul class="nav-links">
         <li><a href="#about" data-i18n="navAbout">About</a></li>
+        <li><a href="#new-mosque" data-i18n="navNewMosque">New Mosque</a></li>
         <li><a href="#prayer" data-i18n="navPrayer">Prayer Times</a></li>
         <li><a href="#visit" data-i18n="navVisit">Visit</a></li>
         <li><a href="#contact" data-i18n="navContact">Contact</a></li>
@@ -393,6 +443,7 @@
   <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile menu">
     <ul>
       <li><a href="#about" data-i18n="navAbout">About</a></li>
+      <li><a href="#new-mosque" data-i18n="navNewMosque">New Mosque</a></li>
       <li><a href="#prayer" data-i18n="navPrayer">Prayer Times</a></li>
       <li><a href="#visit" data-i18n="navVisit">Visit</a></li>
       <li><a href="#contact" data-i18n="navContact">Contact</a></li>
@@ -404,7 +455,7 @@
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
   <div class="hero-inner">
-    <span class="eyebrow" data-i18n="heroEyebrow">Welcome · Dobrodošli</span>
+    <span class="eyebrow" data-i18n="heroEyebrow">Welcome</span>
     <h1 data-i18n="heroTitle">A home for prayer, learning, and <span class="accent">community</span></h1>
     <p data-i18n="heroSub">The Islamic and Educational Center Ezan of Greater Des Moines serves the Bosnian Muslim community and all who seek a place of worship, education, and belonging in central Iowa.</p>
     <div class="hero-cta">
@@ -447,6 +498,47 @@
         <h3 data-i18n="value3Title">Community</h3>
         <p data-i18n="value3Body">Eid celebrations, weddings, funerals, and events that bring families together and welcome new neighbors.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEW MOSQUE PROJECT ============ -->
+<section class="new-mosque" id="new-mosque">
+  <div class="container">
+    <div class="center">
+      <span class="section-eyebrow" data-i18n="nmEyebrow">Our New Mosque</span>
+      <h2 data-i18n="nmTitle">Help us build a permanent home</h2>
+      <p class="lead" data-i18n="nmLead">We've secured the land for a new mosque in Des Moines. With your help, we can break ground and build a place that will serve our community for generations.</p>
+    </div>
+
+    <div class="nm-grid">
+      <div class="nm-media">
+        <figure class="nm-image">
+          <img src="assets/new-mosque-location.png" alt="Future location of the new Ezan mosque in Des Moines" loading="lazy">
+          <figcaption data-i18n="nmImgCap">The site of our future mosque</figcaption>
+        </figure>
+        <figure class="nm-video">
+          <div class="nm-video-wrap">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/XiiUR4veh-s?rel=0"
+              title="IEC Ezan new mosque — project video, April 2026"
+              loading="lazy"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+          </div>
+          <figcaption data-i18n="nmVideoCap">Project video &mdash; April 2026</figcaption>
+        </figure>
+      </div>
+
+      <aside class="nm-goal-card">
+        <span class="nm-goal-eyebrow" data-i18n="nmGoalEyebrow">Funding goal to break ground</span>
+        <div class="nm-goal-amount">$2,000,000</div>
+        <p class="nm-goal-sub" data-i18n="nmGoalSub">more needed before construction begins on the new mosque</p>
+        <a href="https://donate.iecezan.com" class="btn btn-primary nm-goal-btn" data-i18n="nmDonateBtn">Donate to the New Mosque</a>
+        <p class="nm-goal-foot" data-i18n="nmGoalFoot">100% of donations through Givebutter reach the mosque when you skip the optional tip.</p>
+      </aside>
     </div>
   </div>
 </section>
@@ -652,7 +744,7 @@
 
 <!-- Sticky donate (mobile only) -->
 <div class="donate-sticky">
-  <a href="https://donate.iecezan.com" data-i18n="stickyDonate">Donate to the Masjid</a>
+  <a href="https://donate.iecezan.com" data-i18n="stickyDonate">Donate to the Mosque</a>
 </div>
 
 <!-- ============ JAVASCRIPT ============ -->
@@ -662,8 +754,8 @@ const i18n = {
   en: {
     brand: "Islamic & Educational Center Ezan",
     brandSub: "of Greater Des Moines",
-    navAbout: "About", navPrayer: "Prayer Times", navVisit: "Visit", navContact: "Contact", navDonate: "Donate",
-    heroEyebrow: "Welcome · Dobrodošli",
+    navAbout: "About", navNewMosque: "New Mosque", navPrayer: "Prayer Times", navVisit: "Visit", navContact: "Contact", navDonate: "Donate",
+    heroEyebrow: "Welcome",
     heroTitle: 'A home for prayer, learning, and <span class="accent">community</span>',
     heroSub: "The Islamic and Educational Center Ezan of Greater Des Moines serves the Bosnian Muslim community and all who seek a place of worship, education, and belonging in central Iowa.",
     heroCtaDonate: "Support the Mosque",
@@ -677,6 +769,15 @@ const i18n = {
     value2Body: "Mekteb classes for our children, Qur'an study, and programs that connect generations to their faith and heritage.",
     value3Title: "Community",
     value3Body: "Eid celebrations, weddings, funerals, and events that bring families together and welcome new neighbors.",
+    nmEyebrow: "Our New Mosque",
+    nmTitle: "Help us build a permanent home",
+    nmLead: "We've secured the land for a new mosque in Des Moines. With your help, we can break ground and build a place that will serve our community for generations.",
+    nmImgCap: "The site of our future mosque",
+    nmVideoCap: "Project video &mdash; April 2026",
+    nmGoalEyebrow: "Funding goal to break ground",
+    nmGoalSub: "more needed before construction begins on the new mosque",
+    nmDonateBtn: "Donate to the New Mosque",
+    nmGoalFoot: "100% of donations through Givebutter reach the mosque when you skip the optional tip.",
     actionsEyebrow: "Get Involved",
     actionsTitle: "Quick access",
     actPrayerTitle: "Prayer Times",
@@ -715,13 +816,13 @@ const i18n = {
     formSubmit: "Send Message",
     footerTag: "A place of prayer, learning, and community.",
     footerRights: "All rights reserved.",
-    stickyDonate: "Donate to the Masjid"
+    stickyDonate: "Donate to the Mosque"
   },
   bs: {
     brand: "Islamsko-edukativni centar Ezan",
     brandSub: "Greater Des Moines",
-    navAbout: "O nama", navPrayer: "Vaktija", navVisit: "Posjeta", navContact: "Kontakt", navDonate: "Doniraj",
-    heroEyebrow: "Dobrodošli · Welcome",
+    navAbout: "O nama", navNewMosque: "Nova džamija", navPrayer: "Vaktija", navVisit: "Posjeta", navContact: "Kontakt", navDonate: "Doniraj",
+    heroEyebrow: "Dobrodošli",
     heroTitle: 'Mjesto za namaz, učenje i <span class="accent">zajednicu</span>',
     heroSub: "Islamsko-edukativni centar Ezan iz Greater Des Moinesa služi bosanskoj muslimanskoj zajednici i svima koji traže mjesto za ibadet, obrazovanje i pripadnost u centralnoj Iowi.",
     heroCtaDonate: "Podrži džamiju",
@@ -735,6 +836,15 @@ const i18n = {
     value2Body: "Mekteb za našu djecu, učenje Kur'ana i programi koji povezuju generacije s vjerom i baštinom.",
     value3Title: "Zajednica",
     value3Body: "Bajram, vjenčanja, dženaze i događaji koji spajaju porodice i dočekuju nove komšije.",
+    nmEyebrow: "Naša nova džamija",
+    nmTitle: "Pomozite nam izgraditi stalni dom",
+    nmLead: "Obezbijedili smo zemljište za novu džamiju u Des Moinesu. Uz vašu pomoć, možemo započeti gradnju i izgraditi mjesto koje će služiti našoj zajednici generacijama.",
+    nmImgCap: "Lokacija naše buduće džamije",
+    nmVideoCap: "Video projekta &mdash; april 2026.",
+    nmGoalEyebrow: "Cilj sredstava za početak gradnje",
+    nmGoalSub: "potrebno prije početka gradnje nove džamije",
+    nmDonateBtn: "Doniraj za novu džamiju",
+    nmGoalFoot: "100% donacija preko Givebuttera stiže džamiji kad preskočite opcioni tip.",
     actionsEyebrow: "Pridruži se",
     actionsTitle: "Brzi pristup",
     actPrayerTitle: "Vaktija",
