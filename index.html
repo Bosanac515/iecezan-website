@@ -291,6 +291,11 @@
   }
   .nm-image img{width:100%;height:auto;display:block;aspect-ratio:16/10;object-fit:cover}
   .nm-render img{aspect-ratio:16/9}
+  .nm-feature img{aspect-ratio:16/9}
+  .nm-thumbs{display:grid;gap:14px;grid-template-columns:1fr}
+  @media(min-width:560px){.nm-thumbs{grid-template-columns:1fr 1fr}}
+  .nm-thumbs .nm-image img{aspect-ratio:16/9}
+  .nm-thumbs figcaption{font-size:.78rem;padding:8px 10px}
   .nm-image figcaption{
     padding:10px 14px;color:var(--muted);font-size:.85rem;
     background:var(--cream-2);border-top:1px solid var(--line);text-align:center;letter-spacing:.02em;
@@ -629,17 +634,29 @@
 
     <div class="nm-grid">
       <div class="nm-media">
+        <figure class="nm-image nm-feature">
+          <img src="assets/new-mosque-aerial.jpg" alt="Aerial view of the new Ezan mosque at dusk, showing the dome, twin minarets, arcaded courtyard and reflecting pond" loading="eager" width="1800" height="1013">
+          <figcaption data-i18n="nmAerialCap">The new mosque</figcaption>
+        </figure>
+
+        <div class="nm-thumbs">
+          <figure class="nm-image">
+            <img src="assets/new-mosque-east-entry.jpg" alt="The new mosque seen from the front, with twin minarets rising above the arcade" loading="lazy" width="1200" height="675">
+          </figure>
+          <figure class="nm-image">
+            <img src="assets/new-mosque-west-entry.jpg" alt="The new mosque seen across the parking area, with the long arcade and dome" loading="lazy" width="1200" height="675">
+          </figure>
+          <figure class="nm-image">
+            <img src="assets/new-mosque-west-side.jpg" alt="Close view of the mosque facade, with patterned brickwork, dome and minaret" loading="lazy" width="1200" height="675">
+          </figure>
+          <figure class="nm-image">
+            <img src="assets/new-mosque-lower-level.jpg" alt="Corner view of the mosque showing the lower level entrance and steps" loading="lazy" width="1200" height="675">
+          </figure>
+        </div>
+
         <figure class="nm-image">
           <img src="assets/new-mosque-location.png" alt="Future location of the new Ezan mosque in Des Moines" loading="lazy">
           <figcaption data-i18n="nmImgCap">The site of our future mosque</figcaption>
-        </figure>
-        <figure class="nm-image nm-render">
-          <img src="assets/new-mosque-render-front.jpg" alt="Architectural render of the new Ezan mosque — front elevation with twin minarets, copper dome and arcaded courtyard" loading="lazy" width="1600" height="900">
-          <figcaption data-i18n="nmRender1Cap">New mosque design &mdash; front elevation</figcaption>
-        </figure>
-        <figure class="nm-image nm-render">
-          <img src="assets/new-mosque-render-courtyard.jpg" alt="Architectural render of the new Ezan mosque seen from the parking area, showing the long arcade and dome" loading="lazy" width="1600" height="900">
-          <figcaption data-i18n="nmRender2Cap">Approach from the parking area</figcaption>
         </figure>
       </div>
 
@@ -905,8 +922,7 @@ const i18n = {
     nmTitle: "Help us build a permanent home",
     nmLead: "We've secured the land for a new mosque in Des Moines. With your help, we can break ground and build a place that will serve our community for generations.",
     nmImgCap: "The site of our future mosque",
-    nmRender1Cap: "New mosque design &mdash; front elevation",
-    nmRender2Cap: "Approach from the parking area",
+    nmAerialCap: "The new mosque",
     nmGoalEyebrow: "Funding goal to break ground",
     nmGoalSub: "more needed before construction begins on the new mosque",
     nmDonateBtn: "Donate to the New Mosque",
@@ -994,8 +1010,7 @@ const i18n = {
     nmTitle: "Pomozite nam izgraditi stalni dom",
     nmLead: "Obezbijedili smo zemljište za novu džamiju u Des Moinesu. Uz vašu pomoć, možemo započeti gradnju i izgraditi mjesto koje će služiti našoj zajednici generacijama.",
     nmImgCap: "Lokacija naše buduće džamije",
-    nmRender1Cap: "Izgled nove džamije &mdash; pogled sprijeda",
-    nmRender2Cap: "Prilaz sa parkinga",
+    nmAerialCap: "Nova džamija",
     nmGoalEyebrow: "Cilj sredstava za početak gradnje",
     nmGoalSub: "potrebno prije početka gradnje nove džamije",
     nmDonateBtn: "Doniraj za novu džamiju",
