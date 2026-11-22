@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 <meta name="theme-color" content="#0F5132">
-<title>Islamic & Educational Center Ezan of Greater Des Moines</title>
-<meta name="description" content="Islamic and Educational Center Ezan of Greater Des Moines — a place of prayer, learning, and community for Muslims in central Iowa. 6206 Douglas Ave, Des Moines, IA.">
+<title>Islamic &amp; Educational Center Ezan &mdash; Bosnian Muslim Community of Greater Des Moines</title>
+<meta name="description" content="The home of the Bosnian Muslim community of greater Des Moines — daily namaz, mekteb, and the traditions our families carried with them. 6206 Douglas Ave, Des Moines, IA.">
 <link rel="icon" href="assets/ezan-logo.webp" type="image/webp">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Islamic & Educational Center Ezan of Greater Des Moines">
-<meta property="og:description" content="A place of prayer, learning, and community in Des Moines, Iowa.">
+<meta property="og:title" content="Islamic &amp; Educational Center Ezan — Bosnian Muslim Community of Greater Des Moines">
+<meta property="og:description" content="The Bosnian Muslim jamaat of greater Des Moines — namaz, mekteb, and the traditions we brought with us.">
 <meta property="og:image" content="assets/ezan-logo.webp">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://iecezan.com/">
@@ -138,14 +138,22 @@
       radial-gradient(circle at 88% 82%,rgba(201,169,97,.14) 0,transparent 40%);
     pointer-events:none;
   }
-  .hero-inner{position:relative;max-width:780px;margin:0 auto}
+  .hero-inner{position:relative;max-width:880px;margin:0 auto}
   .hero .eyebrow{
     display:inline-block;color:var(--gold-light);letter-spacing:.18em;
     text-transform:uppercase;font-size:.78rem;font-weight:600;margin-bottom:18px;
   }
-  .hero h1{color:var(--cream);margin-bottom:14px}
+  .hero h1{
+    color:var(--cream);margin-bottom:18px;
+    font-size:clamp(1.35rem,3.1vw,2.35rem);
+    line-height:1.32;max-width:860px;margin-left:auto;margin-right:auto;
+    text-wrap:balance;
+  }
   .hero h1 .accent{color:var(--gold-light);font-style:italic}
-  .hero p{color:rgba(250,247,240,.88);font-size:1.08rem;max-width:560px;margin:0 auto 28px}
+  .hero p{
+    color:var(--gold-light);font-size:clamp(1.05rem,2vw,1.3rem);font-weight:600;
+    letter-spacing:.02em;max-width:560px;margin:0 auto 30px;
+  }
   .hero-cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
   .btn{
     display:inline-flex;align-items:center;gap:8px;
@@ -157,6 +165,8 @@
   .btn-primary:hover{background:var(--gold-light);transform:translateY(-1px);color:var(--green-900)}
   .btn-outline{background:transparent;color:var(--cream);border:1.5px solid rgba(250,247,240,.5)}
   .btn-outline:hover{background:rgba(250,247,240,.1);color:var(--cream)}
+  .btn-outline-dark{background:transparent;color:var(--green-700);border:1.5px solid var(--green-700)}
+  .btn-outline-dark:hover{background:var(--green-700);color:var(--cream)}
   .btn-solid{background:var(--green-700);color:var(--cream)}
   .btn-solid:hover{background:var(--green-900);color:var(--cream)}
 
@@ -188,6 +198,77 @@
   .value-card .icon svg{width:28px;height:28px}
   .value-card h3{margin-bottom:8px;font-size:1.3rem}
   .value-card p{color:var(--muted);font-size:.95rem}
+
+  /* ---- Statement ---- */
+  .statement{background:var(--white);padding:46px 0 48px;position:relative}
+  .statement .center{text-align:center;margin-bottom:24px}
+  .statement h2{max-width:680px;margin-left:auto;margin-right:auto;font-size:clamp(1.5rem,3.4vw,2.1rem)}
+  .statement-date{
+    display:block;color:var(--muted);font-size:.82rem;letter-spacing:.08em;
+    text-transform:uppercase;margin-top:10px;
+  }
+  .statement-body{max-width:680px;margin:0 auto}
+  .statement-body p{color:var(--muted);font-size:.98rem;line-height:1.7;margin-bottom:14px}
+  .statement-pull{
+    margin:0 0 20px;padding:14px 20px;border-left:4px solid var(--gold);
+    background:linear-gradient(90deg,rgba(201,169,97,.14),rgba(201,169,97,.03));
+    border-radius:0 8px 8px 0;
+  }
+  .statement-pull p{
+    font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.25rem,2.4vw,1.5rem);
+    line-height:1.3;color:var(--green-900);font-weight:600;margin:0;
+  }
+  .statement-link{text-align:center;margin:18px 0 0}
+  .statement-link button{
+    background:none;border:0;padding:0;cursor:pointer;font-family:inherit;
+    font-size:1.02rem;font-weight:600;color:var(--green-700);
+    text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px;
+  }
+  .statement-link button:hover{color:var(--gold)}
+  .statement-foot{
+    max-width:680px;margin:24px auto 0;padding-top:20px;border-top:1px dashed var(--line);
+    display:flex;gap:12px;flex-wrap:wrap;justify-content:center;align-items:center;
+  }
+
+  /* ---- Full statement dialog ---- */
+  .fs-dialog{
+    width:min(880px,92vw);max-height:88vh;margin:auto;padding:0;border:0;border-radius:14px;
+    background:var(--white);color:var(--ink);box-shadow:var(--shadow-lg);overflow:hidden;
+    display:flex;flex-direction:column;
+  }
+  .fs-dialog:not([open]){display:none}
+  .fs-head{flex-shrink:0}
+  .fs-foot{flex-shrink:0}
+  .fs-dialog::backdrop{background:rgba(11,61,46,.62)}
+  .fs-head{
+    background:linear-gradient(135deg,var(--green-900),var(--green-700));color:var(--cream);
+    padding:22px 26px;display:flex;gap:16px;align-items:flex-start;justify-content:space-between;
+  }
+  .fs-head h2{color:var(--cream);font-size:clamp(1.2rem,2.6vw,1.65rem);margin:0;line-height:1.25}
+  .fs-eyebrow{
+    display:block;color:var(--gold-light);font-size:.72rem;font-weight:700;
+    letter-spacing:.16em;text-transform:uppercase;margin-bottom:8px;
+  }
+  .fs-date{
+    display:block;color:rgba(250,247,240,.72);font-size:.78rem;
+    letter-spacing:.08em;text-transform:uppercase;margin-top:8px;
+  }
+  .fs-close{
+    background:rgba(255,255,255,.12);border:1px solid rgba(201,169,97,.45);color:var(--cream);
+    width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1.25rem;line-height:1;
+    flex-shrink:0;font-family:inherit;
+  }
+  .fs-close:hover{background:var(--gold);color:var(--green-900)}
+  .fs-scroll{overflow-y:auto;flex:1 1 auto;min-height:0;padding:26px 26px 8px;-webkit-overflow-scrolling:touch}
+  .fs-scroll p{color:var(--ink);font-size:1rem;line-height:1.75;margin-bottom:16px}
+  .fs-scroll .statement-pull{margin:22px 0}
+  .fs-foot{
+    border-top:1px solid var(--line);padding:16px 26px;background:var(--cream-2);
+    display:flex;gap:10px;flex-wrap:wrap;justify-content:center;
+  }
+  @media(max-width:600px){
+    .fs-dialog{width:100vw;max-width:100vw;max-height:100vh;height:100dvh;border-radius:0}
+  }
 
   /* ---- New Mosque section ---- */
   .new-mosque{
@@ -432,6 +513,7 @@
     <div class="nav-actions">
       <ul class="nav-links">
         <li><a href="#about" data-i18n="navAbout">About</a></li>
+        <li><a href="#statement" data-i18n="navStatement">Statement</a></li>
         <li><a href="#new-mosque" data-i18n="navNewMosque">New Mosque</a></li>
         <li><a href="#prayer" data-i18n="navPrayer">Prayer Times</a></li>
         <li><a href="#visit" data-i18n="navVisit">Visit</a></li>
@@ -450,6 +532,7 @@
   <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile menu">
     <ul>
       <li><a href="#about" data-i18n="navAbout">About</a></li>
+        <li><a href="#statement" data-i18n="navStatement">Statement</a></li>
       <li><a href="#new-mosque" data-i18n="navNewMosque">New Mosque</a></li>
       <li><a href="#prayer" data-i18n="navPrayer">Prayer Times</a></li>
       <li><a href="#visit" data-i18n="navVisit">Visit</a></li>
@@ -462,12 +545,38 @@
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
   <div class="hero-inner">
-    <span class="eyebrow" data-i18n="heroEyebrow">Welcome</span>
-    <h1 data-i18n="heroTitle">A home for prayer, learning, and <span class="accent">community</span></h1>
-    <p data-i18n="heroSub">The Islamic and Educational Center Ezan of Greater Des Moines serves the Bosnian Muslim community and all who seek a place of worship, education, and belonging in central Iowa.</p>
+    <span class="eyebrow" data-i18n="heroEyebrow">Dobro do&scaron;li &middot; Welcome</span>
+    <h1 data-i18n="heroTitle">The Islamic and Educational Center Ezan of Greater Des Moines serves the <span class="accent">Bosnian Muslim community</span> and all who seek a place of worship, education, and <span class="accent">belonging</span> in central Iowa.</h1>
+    <p data-i18n="heroSub">Central Iowa is our home.</p>
     <div class="hero-cta">
       <a href="https://donate.iecezan.com" class="btn btn-primary" data-i18n="heroCtaDonate">Support the Mosque</a>
       <a href="#prayer" class="btn btn-outline" data-i18n="heroCtaPrayer">Today's Prayer Times</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ STATEMENT ============ -->
+<section class="statement" id="statement">
+  <div class="container">
+    <div class="center">
+      <span class="section-eyebrow" data-i18n="stEyebrow">Our Statement</span>
+      <h2 data-i18n="stTitle">Standing Together for a Shared Future in Urbandale</h2>
+      <span class="statement-date" data-i18n="stDate">November 2026</span>
+    </div>
+
+    <div class="statement-body">
+      <div class="statement-pull">
+        <p data-i18n="stPull">We are not newcomers; we are already your neighbors.</p>
+      </div>
+      <p class="statement-link">
+        <button type="button" data-open-statement data-i18n="stCtaFull">For our full official statement, click here &rarr;</button>
+      </p>
+    </div>
+
+    <div class="statement-foot">
+      <a href="https://donate.iecezan.com" class="btn btn-primary" data-i18n="stCtaDonate">Stand with us</a>
+      <a href="#visit" class="btn btn-outline-dark" data-i18n="stCtaVisit">Come visit us</a>
     </div>
   </div>
 </section>
@@ -478,9 +587,9 @@
 <section id="about">
   <div class="container">
     <div class="center">
-      <span class="section-eyebrow" data-i18n="aboutEyebrow">About Us</span>
-      <h2 data-i18n="aboutTitle">A center built by community, for community</h2>
-      <p class="lead" data-i18n="aboutLead">IEC Ezan is a non-profit Islamic center proudly serving Muslims in the greater Des Moines area. We are a place for daily prayer, religious education, cultural connection, and service to those in need.</p>
+      <span class="section-eyebrow" data-i18n="aboutEyebrow">Our Jamaat</span>
+      <h2 data-i18n="aboutTitle">Rooted in Bosnia, at home in Iowa</h2>
+      <p class="lead" data-i18n="aboutLead">IEC Ezan is the home of the Bosnian Muslim community of greater Des Moines &mdash; a jamaat built by Bosnian families who made central Iowa their home. We pray, teach our children, and gather in the tradition we carried with us, as part of the Islamic Community (Islamska zajednica).</p>
     </div>
 
     <div class="values-grid">
@@ -489,21 +598,21 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
         </div>
         <h3 data-i18n="value1Title">Faith</h3>
-        <p data-i18n="value1Body">Daily prayers, weekly Jumu'ah, and a welcoming space for worship for Muslims of every background.</p>
+        <p data-i18n="value1Body">Daily namaz, Friday džuma, and teravija through Ramadan &mdash; held in Bosnian, the way our families have prayed for generations.</p>
       </div>
       <div class="value-card">
         <div class="icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5a2 2 0 012-2h11.5L20 5.5V19a2 2 0 01-2 2H6a2 2 0 01-2-2z"/><path d="M8 7h6M8 11h8M8 15h5"/></svg>
         </div>
         <h3 data-i18n="value2Title">Education</h3>
-        <p data-i18n="value2Body">Mekteb classes for our children, Qur'an study, and programs that connect generations to their faith and heritage.</p>
+        <p data-i18n="value2Body">Mekteb for our children, Qur'an study, and lessons in Bosnian, so the next generation keeps both the faith and the language.</p>
       </div>
       <div class="value-card">
         <div class="icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M21 21v-2a4 4 0 00-3-3.87M17 3.13a4 4 0 010 7.75"/></svg>
         </div>
         <h3 data-i18n="value3Title">Community</h3>
-        <p data-i18n="value3Body">Eid celebrations, weddings, funerals, and events that bring families together and welcome new neighbors.</p>
+        <p data-i18n="value3Body">Bajram, mevlud and ilahije, weddings and dženaze &mdash; the gatherings that have held Bosnian families together, now here in Iowa.</p>
       </div>
     </div>
   </div>
@@ -757,20 +866,41 @@ const i18n = {
     brand: "Islamic & Educational Center Ezan",
     brandSub: "of Greater Des Moines",
     navAbout: "About", navNewMosque: "New Mosque", navPrayer: "Prayer Times", navVisit: "Visit", navContact: "Contact", navDonate: "Donate",
-    heroEyebrow: "Welcome",
-    heroTitle: 'A home for prayer, learning, and <span class="accent">community</span>',
-    heroSub: "The Islamic and Educational Center Ezan of Greater Des Moines serves the Bosnian Muslim community and all who seek a place of worship, education, and belonging in central Iowa.",
+    heroEyebrow: "Dobro do&scaron;li &middot; Welcome",
+    heroTitle: 'The Islamic and Educational Center Ezan of Greater Des Moines serves the <span class="accent">Bosnian Muslim community</span> and all who seek a place of worship, education, and <span class="accent">belonging</span> in central Iowa.',
+    heroSub: "Central Iowa is our home.",
     heroCtaDonate: "Support the Mosque",
     heroCtaPrayer: "Today's Prayer Times",
-    aboutEyebrow: "About Us",
-    aboutTitle: "A center built by community, for community",
-    aboutLead: "IEC Ezan is a non-profit Islamic center proudly serving Muslims in the greater Des Moines area. We are a place for daily prayer, religious education, cultural connection, and service to those in need.",
+    navStatement: "Statement",
+    stEyebrow: "Our Statement",
+    stTitle: "Standing Together for a Shared Future in Urbandale",
+    stDate: "November 2026",
+    stP2: "For more than three decades, our families have called Iowa home. Many of us arrived here seeking safety and the freedom to rebuild our lives. Today, we are proud to be a vibrant Bosnian American Muslim community rooted in faith, family, education, hard work, and service.",
+    stPull: "We are not newcomers; we are already your neighbors.",
+    stP4: "We have been overwhelmed by an extraordinary outpouring of kindness, solidarity, and support from our fellow Urbandale residents. Neighbors, local leaders, and people of all faiths have stood beside us, reminding us that the spirit of Iowa hospitality is stronger than division. Thank you from the bottom of our hearts.",
+    stP7: "Our doors and our hearts remain open. We welcome our neighbors to visit, ask questions, and get to know us firsthand.",
+    stCtaDonate: "Stand with us",
+    stCtaFull: "For our full official statement, click here &rarr;",
+    fsEyebrow: "Official Statement",
+    fsCtaClose: "Close",
+    fsP1: "As discussions continue around our already-approved relocation to Urbandale, the Islamic and Educational Center Ezan of Greater Des Moines wants to reaffirm our deep commitment to transparency, neighborly partnership, and the shared values that unite our city.",
+    fsP2: "For more than three decades, our families have called Iowa home. Many of us arrived here seeking safety and the freedom to rebuild our lives. Today, we are proud to be a vibrant Bosnian American Muslim community rooted in faith, family, education, hard work, and service.",
+    fsP3: "For the past 18 years, our center has operated just four miles from our future site, maintaining peaceful, respectful relationships with surrounding residents and businesses. Our families live and work in Urbandale, own local businesses, pay taxes, volunteer, serve in civic roles, and send our children to local schools.",
+    fsP4: "While we have been deeply saddened by recent misinformation and anti-Muslim rhetoric surrounding our approved project, we have been overwhelmed by something far more powerful: an extraordinary outpouring of kindness, solidarity, and support from our fellow Urbandale residents. Neighbors, local leaders, and people of all faiths have stood beside us, reminding us that the spirit of Iowa hospitality is stronger than division. Thank you from the bottom of our hearts.",
+    fsP5: "Our new center will provide a welcoming space for worship, youth mentorship, education, and community outreach, a long-term investment in our children and our broader community. We remain grateful to the Urbandale City Council and city staff for their professionalism and adherence to fair process.",
+    fsP6: "Guided by the principles of the U.S. Constitution, we uphold the rule of law and remain dedicated to strengthening the community we call home.",
+    fsP7: "We believe the best response to fear is open dialogue and human connection. Our doors and our hearts remain open. We welcome our neighbors to visit, ask questions, and get to know us firsthand.",
+    fsP8: "We choose understanding over division, compassion over hostility, and hope over fear. We are proud Americans, grateful Iowans, and committed members of the Urbandale community&mdash;and we look forward to building a bright, shared future together.",
+    stCtaVisit: "Come visit us",
+    aboutEyebrow: "Our Jamaat",
+    aboutTitle: "Rooted in Bosnia, at home in Iowa",
+    aboutLead: "IEC Ezan is the home of the Bosnian Muslim community of greater Des Moines &mdash; a jamaat built by Bosnian families who made central Iowa their home. We pray, teach our children, and gather in the tradition we carried with us, as part of the Islamic Community (Islamska zajednica).",
     value1Title: "Faith",
-    value1Body: "Daily prayers, weekly Jumu'ah, and a welcoming space for worship for Muslims of every background.",
+    value1Body: "Daily namaz, Friday džuma, and teravija through Ramadan &mdash; held in Bosnian, the way our families have prayed for generations.",
     value2Title: "Education",
-    value2Body: "Mekteb classes for our children, Qur'an study, and programs that connect generations to their faith and heritage.",
+    value2Body: "Mekteb for our children, Qur'an study, and lessons in Bosnian, so the next generation keeps both the faith and the language.",
     value3Title: "Community",
-    value3Body: "Eid celebrations, weddings, funerals, and events that bring families together and welcome new neighbors.",
+    value3Body: "Bajram, mevlud and ilahije, weddings and dženaze &mdash; the gatherings that have held Bosnian families together, now here in Iowa.",
     nmEyebrow: "Our New Mosque",
     nmTitle: "Help us build a permanent home",
     nmLead: "We've secured the land for a new mosque in Des Moines. With your help, we can break ground and build a place that will serve our community for generations.",
@@ -826,19 +956,40 @@ const i18n = {
     brandSub: "Greater Des Moines",
     navAbout: "O nama", navNewMosque: "Nova džamija", navPrayer: "Vaktija", navVisit: "Posjeta", navContact: "Kontakt", navDonate: "Doniraj",
     heroEyebrow: "Dobrodošli",
-    heroTitle: 'Mjesto za namaz, učenje i <span class="accent">zajednicu</span>',
-    heroSub: "Islamsko-edukativni centar Ezan iz Greater Des Moinesa služi bosanskoj muslimanskoj zajednici i svima koji traže mjesto za ibadet, obrazovanje i pripadnost u centralnoj Iowi.",
+    heroTitle: 'Islamsko-edukativni centar Ezan iz Greater Des Moinesa služi <span class="accent">bosanskoj muslimanskoj zajednici</span> i svima koji traže mjesto za ibadet, obrazovanje i <span class="accent">pripadnost</span> u centralnoj Iowi.',
+    heroSub: "Centralna Iowa je naš dom.",
     heroCtaDonate: "Podrži džamiju",
     heroCtaPrayer: "Današnja vaktija",
-    aboutEyebrow: "O nama",
-    aboutTitle: "Centar izgrađen rukom zajednice",
-    aboutLead: "IEC Ezan je neprofitni islamski centar koji s ponosom služi muslimanima šire oblasti Des Moinesa. Mi smo mjesto za dnevne namaze, vjersko obrazovanje, kulturnu povezanost i pomoć onima u potrebi.",
+    navStatement: "Saopštenje",
+    stEyebrow: "Naše saopštenje",
+    stTitle: "Zajedno za zajedničku budućnost u Urbandaleu",
+    stDate: "Novembar 2026.",
+    stP2: "Više od tri decenije naše porodice Iowu zovu domom. Mnogi od nas došli su ovdje tražeći sigurnost i slobodu da iznova izgrade svoje živote. Danas smo ponosni što smo živa bosanskoamerička muslimanska zajednica utemeljena na vjeri, porodici, obrazovanju, radu i služenju drugima.",
+    stPull: "Mi nismo novopridošlice; mi smo već vaše komšije.",
+    stP4: "Zatekao nas je izvanredan val dobrote, solidarnosti i podrške naših sugrađana iz Urbandalea. Komšije, lokalni čelnici i ljudi svih vjera stali su uz nas, podsjećajući nas da je duh iowske gostoprimljivosti jači od podjela. Hvala vam od srca.",
+    stP7: "Naša vrata i naša srca ostaju otvoreni. Pozivamo naše komšije da nas posjete, postave pitanja i upoznaju nas iz prve ruke.",
+    stCtaDonate: "Podržite nas",
+    stCtaFull: "Za naše cijelo zvanično saopštenje, kliknite ovdje &rarr;",
+    fsEyebrow: "Zvanično saopštenje",
+    fsCtaClose: "Zatvori",
+    fsP1: "Dok se nastavljaju razgovori o našem već odobrenom preseljenju u Urbandale, Islamsko-edukativni centar Ezan iz Greater Des Moinesa želi potvrditi svoju duboku opredijeljenost za transparentnost, dobrosusjedsku saradnju i zajedničke vrijednosti koje spajaju naš grad.",
+    fsP2: "Više od tri decenije naše porodice Iowu zovu domom. Mnogi od nas došli su ovdje tražeći sigurnost i slobodu da iznova izgrade svoje živote. Danas smo ponosni što smo živa bosanskoamerička muslimanska zajednica utemeljena na vjeri, porodici, obrazovanju, radu i služenju drugima.",
+    fsP3: "Proteklih 18 godina naš centar djeluje svega četiri milje od naše buduće lokacije, održavajući mirne i pune poštovanja odnose sa okolnim stanovnicima i preduzećima. Naše porodice žive i rade u Urbandaleu, imaju lokalna preduzeća, plaćaju poreze, volontiraju, obavljaju javne funkcije i šalju svoju djecu u lokalne škole.",
+    fsP4: "Iako nas je duboko rastužila nedavna dezinformacija i antimuslimanska retorika oko našeg odobrenog projekta, zatekao nas je nešto daleko snažnije: izvanredan val dobrote, solidarnosti i podrške naših sugrađana iz Urbandalea. Komšije, lokalni čelnici i ljudi svih vjera stali su uz nas, podsjećajući nas da je duh iowske gostoprimljivosti jači od podjela. Hvala vam od srca.",
+    fsP5: "Naš novi centar bit će mjesto dobrodošlice za ibadet, rad s mladima, obrazovanje i saradnju sa zajednicom — dugoročno ulaganje u našu djecu i našu širu zajednicu. Zahvalni smo Gradskom vijeću Urbandalea i gradskim službama na profesionalnosti i poštivanju pravične procedure.",
+    fsP6: "Vođeni načelima Ustava Sjedinjenih Američkih Država, poštujemo vladavinu prava i ostajemo posvećeni jačanju zajednice koju zovemo domom.",
+    fsP7: "Vjerujemo da je najbolji odgovor na strah otvoren razgovor i ljudska povezanost. Naša vrata i naša srca ostaju otvoreni. Pozivamo naše komšije da nas posjete, postave pitanja i upoznaju nas iz prve ruke.",
+    fsP8: "Biramo razumijevanje umjesto podjela, samilost umjesto netrpeljivosti i nadu umjesto straha. Ponosni smo Amerikanci, zahvalni stanovnici Iowe i predani članovi zajednice Urbandalea — i radujemo se gradnji svijetle, zajedničke budućnosti.",
+    stCtaVisit: "Posjetite nas",
+    aboutEyebrow: "Naš džemat",
+    aboutTitle: "Korijeni u Bosni, dom u Iowi",
+    aboutLead: "IEC Ezan je dom bosanske muslimanske zajednice u Des Moinesu i okolini &mdash; džemat koji su izgradile bosanske porodice koje su centralnu Iowu učinile svojim domom. Klanjamo, učimo našu djecu i okupljamo se u tradiciji koju smo ponijeli sa sobom, kao dio Islamske zajednice.",
     value1Title: "Vjera",
-    value1Body: "Dnevni namazi, sedmična džuma i otvoreno mjesto za ibadet za muslimane svakog porijekla.",
+    value1Body: "Dnevni namazi, džuma petkom i teravija u ramazanu &mdash; na bosanskom jeziku, onako kako su naše porodice klanjale generacijama.",
     value2Title: "Obrazovanje",
-    value2Body: "Mekteb za našu djecu, učenje Kur'ana i programi koji povezuju generacije s vjerom i baštinom.",
+    value2Body: "Mekteb za našu djecu, učenje Kur'ana i časovi bosanskog jezika, da nova generacija sačuva i vjeru i jezik.",
     value3Title: "Zajednica",
-    value3Body: "Bajram, vjenčanja, dženaze i događaji koji spajaju porodice i dočekuju nove komšije.",
+    value3Body: "Bajram, mevlud i ilahije, svadbe i dženaze &mdash; okupljanja koja su držala bosanske porodice na okupu, sada ovdje u Iowi.",
     nmEyebrow: "Naša nova džamija",
     nmTitle: "Pomozite nam izgraditi stalni dom",
     nmLead: "Obezbijedili smo zemljište za novu džamiju u Des Moinesu. Uz vašu pomoć, možemo započeti gradnju i izgraditi mjesto koje će služiti našoj zajednici generacijama.",
@@ -1052,7 +1203,66 @@ document.getElementById('yr').textContent = new Date().getFullYear();
   modal.addEventListener("click", (e) => { if(e.target === modal) closeModal(); });
   document.addEventListener("keydown", (e) => { if(e.key === "Escape" && modal.classList.contains("is-open")) closeModal(); });
 })();
+
+/* ---------- Full official statement dialog ---------- */
+(function(){
+  function init(){
+  const dlg = document.getElementById("fullStatement");
+  if(!dlg) return;
+  const triggers = document.querySelectorAll("[data-open-statement]");
+  function open(e){
+    if(e) e.preventDefault();
+    if(typeof dlg.showModal === "function"){
+      dlg.showModal();
+      document.body.style.overflow = "hidden";
+      const sc = dlg.querySelector(".fs-scroll"); if(sc) sc.scrollTop = 0;
+    } else {
+      window.open("https://www.facebook.com/ICEzanDSM/", "_blank", "noopener");
+    }
+  }
+  triggers.forEach(t => t.addEventListener("click", open));
+  const closeBtn = document.getElementById("fsClose");
+  if(closeBtn) closeBtn.addEventListener("click", () => dlg.close());
+  dlg.querySelectorAll("[data-close-statement]").forEach(x => x.addEventListener("click", () => dlg.close()));
+  dlg.addEventListener("click", (e) => { if(e.target === dlg) dlg.close(); });
+  dlg.addEventListener("close", () => { document.body.style.overflow = ""; });
+  }
+  if(document.readyState === "loading"){ document.addEventListener("DOMContentLoaded", init); } else { init(); }
+})();
 </script>
+
+<!-- ============ FULL STATEMENT DIALOG ============ -->
+<dialog class="fs-dialog" id="fullStatement" aria-labelledby="fsTitle">
+  <div class="fs-head">
+    <div>
+      <span class="fs-eyebrow" data-i18n="fsEyebrow">Official Statement</span>
+      <h2 id="fsTitle" data-i18n="stTitle">Standing Together for a Shared Future in Urbandale</h2>
+      <span class="fs-date" data-i18n="stDate">November 2026</span>
+    </div>
+    <button type="button" class="fs-close" id="fsClose" aria-label="Close">&times;</button>
+  </div>
+
+  <div class="fs-scroll">
+    <p data-i18n="fsP1">As discussions continue around our already-approved relocation to Urbandale, the Islamic and Educational Center Ezan of Greater Des Moines wants to reaffirm our deep commitment to transparency, neighborly partnership, and the shared values that unite our city.</p>
+    <p data-i18n="fsP2">For more than three decades, our families have called Iowa home. Many of us arrived here seeking safety and the freedom to rebuild our lives. Today, we are proud to be a vibrant Bosnian American Muslim community rooted in faith, family, education, hard work, and service.</p>
+
+    <div class="statement-pull">
+      <p data-i18n="stPull">We are not newcomers; we are already your neighbors.</p>
+    </div>
+
+    <p data-i18n="fsP3">For the past 18 years, our center has operated just four miles from our future site, maintaining peaceful, respectful relationships with surrounding residents and businesses. Our families live and work in Urbandale, own local businesses, pay taxes, volunteer, serve in civic roles, and send our children to local schools.</p>
+    <p data-i18n="fsP4">While we have been deeply saddened by recent misinformation and anti-Muslim rhetoric surrounding our approved project, we have been overwhelmed by something far more powerful: an extraordinary outpouring of kindness, solidarity, and support from our fellow Urbandale residents. Neighbors, local leaders, and people of all faiths have stood beside us, reminding us that the spirit of Iowa hospitality is stronger than division. Thank you from the bottom of our hearts.</p>
+    <p data-i18n="fsP5">Our new center will provide a welcoming space for worship, youth mentorship, education, and community outreach, a long-term investment in our children and our broader community. We remain grateful to the Urbandale City Council and city staff for their professionalism and adherence to fair process.</p>
+    <p data-i18n="fsP6">Guided by the principles of the U.S. Constitution, we uphold the rule of law and remain dedicated to strengthening the community we call home.</p>
+    <p data-i18n="fsP7">We believe the best response to fear is open dialogue and human connection. Our doors and our hearts remain open. We welcome our neighbors to visit, ask questions, and get to know us firsthand.</p>
+    <p data-i18n="fsP8">We choose understanding over division, compassion over hostility, and hope over fear. We are proud Americans, grateful Iowans, and committed members of the Urbandale community&mdash;and we look forward to building a bright, shared future together.</p>
+  </div>
+
+  <div class="fs-foot">
+    <a href="https://donate.iecezan.com" class="btn btn-primary" data-i18n="stCtaDonate">Stand with us</a>
+    <button type="button" class="btn btn-outline-dark" data-close-statement data-i18n="fsCtaClose">Close</button>
+  </div>
+</dialog>
 
 </body>
 </html>
